@@ -1,0 +1,5 @@
+package com.gent.projectmanagement.repositories;
+
+public interface ProjectRepository {
+
+}
