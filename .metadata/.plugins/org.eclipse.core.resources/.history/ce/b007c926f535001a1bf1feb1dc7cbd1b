@@ -1,0 +1,5 @@
+package com.gent.projectmanagement.exceptions;
+
+public class CustomResponseEntityExceptionHandler {
+
+}
