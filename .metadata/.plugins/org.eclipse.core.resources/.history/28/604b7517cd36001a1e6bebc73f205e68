@@ -7,7 +7,6 @@ import java.util.Map;
 import javax.validation.Valid;
 import javax.websocket.server.PathParam;
 
-import org.hibernate.annotations.UpdateTimestamp;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -62,5 +61,5 @@ public class ProjectController {
 		projectService.deleteProjectByIdentifier(projectId);
 		return new ResponseEntity<String>("Project with ID: " 
 		+ projectId + " was deleted sucessfully!", HttpStatus.OK);  
-	}	
+	}
 }

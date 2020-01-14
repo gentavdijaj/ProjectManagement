@@ -46,14 +46,5 @@ public class ProjectService {
 		}
 		projectRepository.delete(project);
 	}
-	
-	public Project updateProjectDetails(String projectId) {
-		Project project = projectRepository.findByProjectIdentifier(projectId);
-		if(project == null) {
-			throw new ProjectIdException("Cannot find project with ID: " + projectId 
-					+ ". This project does not exist!");
-		}
-		return projectRepository.save(project);
-	}
 
 }

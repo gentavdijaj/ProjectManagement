@@ -62,5 +62,16 @@ public class ProjectController {
 		projectService.deleteProjectByIdentifier(projectId);
 		return new ResponseEntity<String>("Project with ID: " 
 		+ projectId + " was deleted sucessfully!", HttpStatus.OK);  
-	}	
+	}
+	
+	@GetMapping("/{projectId}")
+	public ResponseEntity<?> updateProjectById(@PathVariable String projectId){
+		System.out.println("Is being called!!!");
+		Project project = projectService.updateProjectDetails(projectId);
+		System.out.println("Projekti: " + project.getProjectIdentifier()
+		+" : " + project.getProjectName());
+		return new ResponseEntity<Project>(project, HttpStatus.OK);
+	}
+	
+	
 }
